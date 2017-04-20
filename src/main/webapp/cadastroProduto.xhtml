@@ -1,0 +1,34 @@
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"  
+             xmlns:h="http://java.sun.com/jsf/html"    
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             template="template.xhtml"
+             xmlns:f="http://xmlns.jcp.org/jsf/core"
+             xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">  
+
+    <ui:define name="conteudo">
+        <header>
+            <h2>Cadastro de produto</h2>
+            <p>Aqui você pode cadastrar todos seus produtos</p>
+
+        </header>
+        
+        <div style="width: 500px; margin-left: auto; margin-right: auto;">
+            
+            <p:panelGrid columns="1" style="border: none !important;">
+
+                <h:outputText value="Nome" />
+                <p:inputText value="#{bean.value}" style="width: 100%;"/>
+                
+                <h:outputText value="Team:" />
+                <p:inputText value="#{bean.value}" style="width: 100%;"/>
+
+                <h:outputText value="Position:" />
+                <h:outputText value="Shooting Guard" />
+
+                <h:outputText value="Number:" />
+                <h:outputText value="24" />
+            </p:panelGrid>
+        </div>
+    </ui:define>
+</ui:decorate>  
