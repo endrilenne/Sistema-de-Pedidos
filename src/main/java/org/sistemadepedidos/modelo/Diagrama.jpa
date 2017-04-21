@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" pkg="org.sistemadepedidos.modelo" v="4.2" rws="_14928034528472" cws="_14928034528472" sm="false" xs="false" id="_14928034528471" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity xre="false" compositePrimaryKeyClass="ClientePK" abs="false" class="Cliente" v="true" m="false" rootElement="_14928034528471" id="_1492803826408">
+        <jpa:ts e="true"/>
+        <jpa:ath>Enisval</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="nome" id="_14928038408419">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="long" v="true" name="cpf" id="_149280384653510">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:basic>
+            <jpa:one-to-many own="true" collection-type="java.util.List" connected-entity-id="_1492803987727" v="true" name="compras" id="_149280431077726">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:one-to-many>
+            <jpa:id attribute-type="Long" v="true" name="id" id="_14928038264247">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Cliente.findAll">
+            <jpa:query>Select e from Cliente e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Cliente.findByNome">
+            <jpa:query>Select c from Cliente c where c.nome=:nome</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Cliente.findByCpf">
+            <jpa:query>Select c from Cliente c where c.cpf=:cpf</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Cliente.findByAttribute">
+            <jpa:query>Select c from Cliente c where c.attribute=:attribute</jpa:query>
+        </jpa:nq>
+        <jpa:el/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="ProdutoPK" abs="false" class="Produto" v="true" m="false" rootElement="_14928034528471" id="_1492803901593">
+        <jpa:ts e="true"/>
+        <jpa:ath>Enisval</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="String" v="true" name="nome" id="_149280391801714">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="String" v="true" name="descricao" id="_149280392565415">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="int" v="true" name="quantidade" id="_149280393079116">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="double" v="true" name="preco" id="_149280393479917">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:basic>
+            <jpa:id attribute-type="Long" v="true" name="id" id="_149280390160812">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Produto.findAll">
+            <jpa:query>Select e from Produto e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Produto.findByNome">
+            <jpa:query>Select p from Produto p where p.nome=:nome</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Produto.findByDescricao">
+            <jpa:query>Select p from Produto p where p.descricao=:descricao</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Produto.findByQuantidade">
+            <jpa:query>Select p from Produto p where p.quantidade=:quantidade</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Produto.findByPreco">
+            <jpa:query>Select p from Produto p where p.preco=:preco</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Produto.findByAttribute1">
+            <jpa:query>Select p from Produto p where p.attribute1=:attribute1</jpa:query>
+        </jpa:nq>
+        <jpa:el/>
+    </jpa:entity>
+    <jpa:entity xre="false" compositePrimaryKeyClass="CompraPK" abs="false" class="Compra" v="true" m="false" rootElement="_14928034528471" id="_1492803987727">
+        <jpa:ts e="true"/>
+        <jpa:ath>Enisval</jpa:ath>
+        <jpa:attributes>
+            <jpa:basic attribute-type="double" v="true" name="valor" id="_149280399837321">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:basic>
+            <jpa:basic attribute-type="java.sql.Date" v="true" name="data" id="_149280401312922">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:basic>
+            <jpa:one-to-many own="true" collection-type="java.util.List" connected-entity-id="_1492803901593" v="true" name="produtoes" id="_149280425924025">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+            </jpa:one-to-many>
+            <jpa:id attribute-type="Long" v="true" name="id" id="_149280398772719">
+                <jpa:bv/>
+                <jpa:kbv/>
+                <jpa:vbv/>
+                <jpa:generated-value strategy="AUTO"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:nq e="false" name="Compra.findAll">
+            <jpa:query>Select e from Compra e</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Compra.findByValor">
+            <jpa:query>Select c from Compra c where c.valor=:valor</jpa:query>
+        </jpa:nq>
+        <jpa:nq e="false" name="Compra.findByData">
+            <jpa:query>Select c from Compra c where c.data=:data</jpa:query>
+        </jpa:nq>
+        <jpa:el/>
+    </jpa:entity>
+    <jpa:snp loc="BEFORE_PACKAGE" e="true">/**
+ * This file was generated by the Jeddict
+ */</jpa:snp>
+    <jpa:wsl>
+        <jpa:ws n="Main" id="_14928034528472">
+            <i ref="_1492803826408" x="73" y="107">
+                <el/>
+            </i>
+            <i ref="_1492803901593" x="558" y="213">
+                <el/>
+            </i>
+            <i ref="_1492803987727" x="316" y="107">
+                <el/>
+            </i>
+        </jpa:ws>
+    </jpa:wsl>
+</jpa:entity-mappings>

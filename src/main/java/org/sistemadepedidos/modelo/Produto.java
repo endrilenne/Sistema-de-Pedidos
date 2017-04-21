@@ -1,4 +1,3 @@
-        
 package org.sistemadepedidos.modelo;
 
 import java.io.Serializable;
@@ -102,9 +101,9 @@ public class Produto implements Serializable {
     public void setPreco(double preco) {
         this.preco = preco;
     }
+
     @Override
     public String toString() {
         return "Produto{" + "id=" + id + ", nome=" + nome + ", descricao=" + descricao + ", categoria=" + categoria + ", quantidade=" + quantidade + ", preco=" + preco + '}';
     }
-    }
-   
+}

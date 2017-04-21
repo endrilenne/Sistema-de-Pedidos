@@ -10,16 +10,20 @@ import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import org.sistemadepedidos.dao.ProdutoDAO;
 import org.sistemadepedidos.modelo.Produto;
 
-@Named(value = "ListarProdutos")
+@Named(value = "mbListarProdutos")
 @RequestScoped
 public class ListarProdutosBean {
     
+   @Inject
+    private ProdutoDAO dao;
     private List<Produto> produtos;
 
     @PostConstruct
     private void init(){
+        this.produtos = dao.buscarTodos();
     }
     
     public List<Produto> getProdutos() {
@@ -27,4 +31,5 @@ public class ListarProdutosBean {
     }
     
 }
+
     
