@@ -12,23 +12,32 @@
             <p>Aqui você pode cadastrar todos seus produtos</p>
 
         </header>
-        
+
         <div style="width: 500px; margin-left: auto; margin-right: auto;">
-            
-            <p:panelGrid columns="1" style="border: none !important;">
+            <h:form>
+                <p:panelGrid columns="1" style="border: none !important;">
 
-                <h:outputText value="Nome" />
-                <p:inputText value="#{bean.value}" style="width: 100%;"/>
-                
-                <h:outputText value="Team:" />
-                <p:inputText value="#{bean.value}" style="width: 100%;"/>
+                    <h:outputText value="Nome" />
+                    <p:inputText value="#{cadastrarProdutoBean.produto.nome}" style="width: 100%;"/>
 
-                <h:outputText value="Position:" />
-                <h:outputText value="Shooting Guard" />
+                    <h:outputText value="Descrição:" />
+                    <p:inputText value="#{cadastrarProdutoBean.produto.descricao}" style="width: 100%;"/>
+                    
+                    <h:outputText value="Categoria" />
+                    <p:inputText value="#{cadastrarProdutoBean.produto.categoria}" style="width: 100%;"/>
 
-                <h:outputText value="Number:" />
-                <h:outputText value="24" />
-            </p:panelGrid>
+                    <p:panelGrid columns="4" style="border: none !important;">
+
+                        <h:outputText value="Preço:" />
+                        <p:inputText value="#{cadastrarProdutoBean.produto.preco}" style="width: 60%;"/>
+
+                        <h:outputText value="Quantidade:" />
+                        <p:inputText value="#{cadastrarProdutoBean.produto.quantidade}" style="width: 60%;"/>
+
+                    </p:panelGrid>
+                    <h:commandButton value="Cadastrar" action="#{cadastrarProdutoBean.adicionar()}" />
+                </p:panelGrid>
+            </h:form>
         </div>
     </ui:define>
 </ui:decorate>  
