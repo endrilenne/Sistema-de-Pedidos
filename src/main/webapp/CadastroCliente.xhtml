@@ -1,0 +1,33 @@
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"  
+             xmlns:h="http://java.sun.com/jsf/html"    
+             xmlns:p="http://primefaces.org/ui"
+             xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+             template="template.xhtml"
+             xmlns:f="http://xmlns.jcp.org/jsf/core"
+             xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">  
+
+    <ui:define name="conteudo">
+        <header>
+            <h2>Sistema de pedidos</h2>
+            <p>Cadastro de todos os clientes</p>
+
+        </header>
+
+        <div style="width: 500px; margin-left: auto; margin-right: auto;">
+            <h:form>
+                <p:panelGrid columns="1" style="border: none !important;">
+
+                    <h:outputText value="Nome" />
+                    <p:inputText value="#{mbCadastrarClienteBean.cliente.nome}" style="width: 100%;"/>
+
+                    <h:outputText value="CPF:" />
+                    <p:inputText value="#{mbCadastrarClienteBean.cliente.cpf}" style="width: 100%;"/>
+                    
+
+                    </p:panelGrid>
+                    <h:commandButton value="Cadastrar" action="#{mbCadastrarClienteBean.adicionar()}" />
+           
+            </h:form>
+        </div>
+    </ui:define>
+</ui:decorate>  
