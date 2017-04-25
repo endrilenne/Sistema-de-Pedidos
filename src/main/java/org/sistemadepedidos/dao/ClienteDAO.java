@@ -11,12 +11,8 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 import org.sistemadepedidos.modelo.Cliente;
-import org.sistemadepedidos.modelo.Produto;
 
 public class ClienteDAO {
-  
-
-
 
     @PersistenceContext
     private EntityManager em;
